@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import SignUp from './loginPage/Sign';
 import Login from './loginPage/Login';
+import Recommned from './movierecommendPage/Recommend'
 import reportWebVitals from './reportWebVitals';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -12,9 +14,10 @@ import {
 
 ReactDOM.render(
   <Router>
-    <div>
       <Route exact path="/">
-        <SignUp />
+        <StrictMode>
+          <SignUp />
+        </StrictMode>
       </Route>
       <Route path="/sign">
         <SignUp />
@@ -22,7 +25,11 @@ ReactDOM.render(
       <Route path="/login">
         <Login />
       </Route>
-   </div>
+      <Route path="/recommend">
+        <StrictMode>
+          <Recommned />
+        </StrictMode>
+      </Route>
   </Router>,
   document.getElementById('root')
 );

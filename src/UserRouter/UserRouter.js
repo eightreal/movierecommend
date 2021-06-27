@@ -16,7 +16,7 @@ class BasicRoute extends Component {
         <Switch>
           {
             !loginUser()
-              ? <Route exact path="/Login">
+              ? <Route exact path="/recomend">
                   <Login />
                 </Route>
               : (

@@ -76,7 +76,7 @@ export default function SignIn() {
           >
             Sign In
           </Button>
-          <Grid container>
+          <Grid container justify = "flex-end">
             <Grid item>
               <Link href="/sign" variant="body2">
                 {"Don't have an account? Sign Up"}
